@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Simulate SQL Deadlock";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <p>Click the buttons below to simulate deadlock by running two concurrent transactions.</p>
+
+    <form id="formA">
+        <input type="hidden" name="firstProduct" value="true" />
+        <button type="submit" class="btn btn-primary">Start Transaction A (Product → Vendor)</button>
+    </form>
+
+    <br />
+
+    <form id="formB">
+        <input type="hidden" name="firstProduct" value="false" />
+        <button type="submit" class="btn btn-danger">Start Transaction B (Vendor → Product)</button>
+    </form>
+
+    <br />
+    <p id="result"></p>
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('formA').addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch('/SimulateDeadlock', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'firstProduct=true'
+            })
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('result').innerText = data;
+                });
+        });
+
+        document.getElementById('formB').addEventListener('submit', function (e) {
+            e.preventDefault();
+            fetch('/SimulateDeadlock', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: 'firstProduct=false'
+            })
+                .then(res => res.text())
+                .then(data => {
+                    document.getElementById('result').innerText = data;
+                });
+        });
+    </script>
+}

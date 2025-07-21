@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProjectSQLDeadLock", "MiniProjectSQLDeadLock\MiniProjectSQLDeadLock.csproj", "{35F88DF0-D39E-4997-9A8E-EE8492FC1866}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35F88DF0-D39E-4997-9A8E-EE8492FC1866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F88DF0-D39E-4997-9A8E-EE8492FC1866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F88DF0-D39E-4997-9A8E-EE8492FC1866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F88DF0-D39E-4997-9A8E-EE8492FC1866}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02D2B197-CBBC-40CD-8BDA-9A211CD52329}
+	EndGlobalSection
+EndGlobal
